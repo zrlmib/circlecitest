@@ -3,7 +3,8 @@ orbs:
 version: 2.1
 workflows:
   build-and-publish-docker-image:
+    environment:
+      DOCKER_USERNAME: zrlmib
     jobs:
       - docker/publish:
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
-          docker-username: zrlmib
