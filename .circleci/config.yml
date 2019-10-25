@@ -2,10 +2,10 @@ orbs:
   docker: circleci/docker@0.5.13
 version: 2.1
 workflows:
-  build-and-publish-docker-image:
+  build-docker-image-only:
     jobs:
-      - docker/check:
-          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
       - docker/publish:
+          deploy: false
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+
 
