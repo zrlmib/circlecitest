@@ -1,16 +1,9 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: ubuntu:bionic
+orbs:
+  docker: circleci/docker@0.5.13
+version: 2.1
+workflows:
+  build-and-publish-docker-image:
+    jobs:
+      - docker/publish:
+          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
 
-    steps:
-      - checkout
-
-      - run:
-          name: Looking around
-          command: pwd; ls
-
-      - run:
-          name: Build docker image
-          command: docker build -t testimage .
