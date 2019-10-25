@@ -5,5 +5,7 @@ workflows:
   build-and-publish-docker-image:
     jobs:
       - docker/check:
+          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
       - docker/publish:
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+
