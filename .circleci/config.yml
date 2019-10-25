@@ -8,8 +8,8 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Moin Moin.
+          name: Looking around
+          command: pwd; ls
 
       - run:
           name: Print the Current Time
