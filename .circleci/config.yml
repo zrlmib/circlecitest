@@ -12,5 +12,5 @@ jobs:
           command: pwd; ls
 
       - run:
-          name: Print the Current Time
-          command: date
+          name: Build docker image
+          command: docker build -t testimage .
