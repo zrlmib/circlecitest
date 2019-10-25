@@ -6,6 +6,4 @@ workflows:
     jobs:
       - docker/publish:
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
-    environment:
-      - DOCKER_LOGIN: zrlmib
-
+          docker-username: zrlmib
