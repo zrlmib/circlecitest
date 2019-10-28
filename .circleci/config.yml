@@ -12,6 +12,7 @@ jobs:
 workflows:
   version: 2
   build:
-    context: zrlmib
     jobs:
-      - "build"
+      - "build":
+        context: zrlmib
+
