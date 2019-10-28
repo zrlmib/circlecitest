@@ -10,7 +10,7 @@ jobs:
       - run: echo "A first hello"
       - run:
           name: Looking around
-          command: echo "login: $DOCKER_LOGIN"
+          command: echo $DOCKER_LOGIN
       - run:
           name: Building an image 
           command: docker build -t ci-built-image .
