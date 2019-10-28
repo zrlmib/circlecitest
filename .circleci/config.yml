@@ -14,4 +14,7 @@ jobs:
       - run:
           name: Building an image 
           command: docker build -t ci-built-image .
+      - run:
+          name: Push image
+          command: docker login && docker tag ci-built-image zrlmib/ci-built-image && docker push zrlmib/ci-built-image
 
