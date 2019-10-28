@@ -1,20 +1,15 @@
-version: 2
+version: 2.0
+
 jobs:
-  build:
+  "build":
     docker:
-      - image: zrlmib/ubuntu-ciitest
-        context: zrlmib
+      - image: circleci/ruby:2.2-node
     steps:
       - checkout
-      - setup_remote_docker
-      - run: echo "A first hello"
-      - run:
-          name: Looking around
-          command: echo ${DOCKER_LOGIN} && echo $CIRCLE_BRANCH
-      - run:
-          name: Building an image 
-          command: docker build -t ci-built-image .
-      - run:
-          name: Push image
-          command: docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD && docker tag ci-built-image zrlmib/ci-built-image && docker push zrlmib/ci-built-image
+      - run: echo "Hello World"
 
+workflows:
+  version: 2
+  build:
+    jobs:
+      - "build"
