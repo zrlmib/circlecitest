@@ -11,6 +11,6 @@ jobs:
           name: Looking around
           command: pwd && ls -laR .
       - run:
-          name: Building an image
+          name: Building an image 
           command: docker build -t ci-built-image .
 
