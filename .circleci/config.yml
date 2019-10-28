@@ -10,7 +10,7 @@ jobs:
       - run: echo "A first hello"
       - run:
           name: Looking around
-          command: echo ${DOCKER_LOGIN}
+          command: echo ${DOCKER_LOGIN} && echo $CIRCLE_BRANCH
       - run:
           name: Building an image 
           command: docker build -t ci-built-image .
