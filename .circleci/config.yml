@@ -7,5 +7,6 @@ workflows:
       - docker/publish:
           deploy: true
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+          context: zrlmib
 
 
