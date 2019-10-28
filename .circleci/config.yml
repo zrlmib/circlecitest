@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: zrlmib/ubuntu-ciitest
     steps:
       - checkout
       - run: echo "A first hello"
