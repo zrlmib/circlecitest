@@ -4,7 +4,6 @@ jobs:
   "build":
     docker:
       - image: zrlmib/ubuntu-ciitest
-    context: zrlmib
     steps:
       - checkout
       - setup_remote_docker
@@ -13,5 +12,6 @@ jobs:
 workflows:
   version: 2
   build:
+    context: zrlmib
     jobs:
       - "build"
