@@ -6,3 +6,6 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
+      - run:
+          name: Looking around
+          command: pwd && ls -laR .
