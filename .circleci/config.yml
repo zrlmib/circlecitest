@@ -5,6 +5,7 @@ jobs:
       - image: zrlmib/ubuntu-ciitest
     steps:
       - checkout
+      - setup_remote_docker
       - run: echo "A first hello"
       - run:
           name: Looking around
